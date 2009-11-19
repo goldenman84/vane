@@ -208,6 +208,10 @@
    <name>fvformid</name>
    <rtexprvalue>true</rtexprvalue>
   </attribute>
+  <attribute>
+   <name>fvregexp</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
  </tag>
  <!-- 日期时间选择框 -->
  <tag>
