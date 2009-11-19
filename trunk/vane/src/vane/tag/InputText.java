@@ -33,34 +33,38 @@ public class InputText extends InputSuper{
 	
 	/***************************FormValidator属性********************************/
 	
+	private String javaScriptStr="";
+	
 	@SuppressWarnings("static-access")
 	public int doStartTag() throws JspException{
 		JspWriter jspOut = pageContext.getOut();
 		HttpServletRequest request = (HttpServletRequest) pageContext.getRequest();
 		StringBuilder sb=new StringBuilder();
 		if(request.getAttribute("VaneInputText")==null){
-			sb.append("<script src=\""+getPath(request)+"/vanetag/ui/jqueryValidator/jquery_last.js\" type=\"text/javascript\"></script>\n");
+			sb.append("\t<script src=\""+getPath(request)+"/vanetag/ui/jqueryValidator/jquery_last.js\" type=\"text/javascript\"></script>\n");
 			sb.append("\t<script src=\""+getPath(request)+"/vanetag/ui/jqueryValidator/formValidator.js\" type=\"text/javascript\" charset=\"UTF-8\"></script>\n");
 			sb.append("\t<script src=\""+getPath(request)+"/vanetag/ui/jqueryValidator/formValidatorRegex.js\" type=\"text/javascript\" charset=\"UTF-8\"></script>\n");
 			sb.append("\t<link  href=\""+getPath(request)+"/vanetag/ui/jqueryValidator/style/validator.css\" type=\"text/css\" rel=\"stylesheet\"></link>\n");
 			request.setAttribute("VaneInputText","true");
 		}
-		sb.append("<input type=\""+getType()+"\" ");
-		sb.append(getBaseStr());
-		sb.append(" />");
-		String str="";
-		if(null!=fvtipid||!"".equals(fvtipid)){
-			str+="";
+		
+		if(null!=fvtipid||!"".equals(fvtipid)||null!=getId()||!"hidden".equals(getId())){
+			javaScriptStr+="$(\""+getId()+"\").formValidator({onshow:\""+fvonshow+"\",oncorrect:\""+fvoncorrect+"\"}).regexValidator({regexp:\""+fvregexp+"\",datatype:\"enum\",onerror:\""+fvonerror+"\"});\n";
 		}
+		System.out.println(javaScriptStr);
 		if(request.getAttribute("VaneFormId")==null){
 			sb.append("\t<script type=\"text/javascript\">\n");
 			sb.append("\t$(document).ready(function(){\n");
-			sb.append("\t$.formValidator.initConfig({formid:\""+fvformid+"\",onerror:function(){alert(\"校验没有通过，具体错误请看错误提示\")}});\n");
-			sb.append("\t"+str+"\n");
+			sb.append("\t\t$.formValidator.initConfig({formid:\""+fvformid+"\",onerror:function(){alert(\"校验没有通过，具体错误请看错误提示\")}});\n");
+			sb.append("\t\t"+javaScriptStr);
 			sb.append("\t});\n");
 			sb.append("\t</script>\n");
 			request.setAttribute("VaneFormId","true");
 		}
+		
+		sb.append("<input type=\""+getType()+"\"");
+		sb.append(getBaseStr());
+		sb.append("/>");
 		try {
 			jspOut.write(sb.toString());
 		} catch (IOException e) {
