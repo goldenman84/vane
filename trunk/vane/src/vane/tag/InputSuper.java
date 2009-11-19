@@ -52,83 +52,83 @@ public class InputSuper extends VaneTag {
 	protected String getBaseStr() {
 		String basestr = " ";
 		if (name != null)
-			basestr += " name= \"" + name + "\" ";
+			basestr += "name=\"" + name + "\"";
 		if (id != null)
-			basestr += " id= \"" + id + "\" ";
+			basestr += " id=\"" + id + "\"";
 		if (accept != null)
-			basestr += " accept= \"" + accept + "\" ";
+			basestr += " accept=\"" + accept + "\"";
 		if (accesskey != null)
-			basestr += " accesskey= \"" + accesskey + "\" ";
+			basestr += " accesskey=\"" + accesskey + "\"";
 		if (align != null)
-			basestr += " align= \"" + align + "\" ";
+			basestr += " align=\"" + align + "\"";
 		if (alt != null)
-			basestr += " alt= \"" + alt + " \" ";
+			basestr += " alt=\"" + alt + " \"";
 		if (border != null)
-			basestr += " border= \"" + border + "\" ";
+			basestr += " border=\"" + border + "\"";
 		if (checked != null)
-			basestr += " checked= \"" + checked + "\" ";
+			basestr += " checked=\"" + checked + "\"";
 		if (classstyle != null)
-			basestr += " class= \"" + classstyle + "\" ";
+			basestr += " class=\"" + classstyle + "\"";
 		if (dir != null)
-			basestr += " dir= \"" + dir + "\" ";
+			basestr += " dir=\"" + dir + "\"";
 		if (disabled != null)
-			basestr += " disabled= \"" + disabled + "\" ";
+			basestr += " disabled=\"" + disabled + "\"";
 		if (height != null)
-			basestr += " height= \"" + height + "\" ";
+			basestr += " height=\"" + height + "\"";
 		if (ismap != null)
-			basestr += " ismap= \"" + ismap + "\" ";
+			basestr += " ismap=\"" + ismap + "\"";
 		if (istyle != null)
-			basestr += " istyle= \"" + istyle + "\" ";
+			basestr += " istyle=\"" + istyle + "\"";
 		if (lang != null)
-			basestr += " lang= \"" + lang + "\" ";
+			basestr += " lang=\"" + lang + "\"";
 		if (maxlength != null)
-			basestr += " maxlength= \"" + maxlength + " \" ";
+			basestr += " maxlength=\"" + maxlength + "\"";
 //		if (type!=null)
 //			basestr+=" type=\""+type+"\"";
 		// ---------------------------------------------------
 		// if(onblur!=null)
 		// basestr+=" onblur= \""+onblur+" \" ";
 		if (onchange != null)
-			basestr += " onchange= \"" + onchange + "\" ";
+			basestr += " onchange=\"" + onchange + "\"";
 		if (onclick != null)
-			basestr += " onclick= \"" + onclick + "\" ";
+			basestr += " onclick=\"" + onclick + "\"";
 		if (ondblclick != null)
-			basestr += " ondblclick= \"" + ondblclick + "\" ";
+			basestr += " ondblclick=\"" + ondblclick + "\"";
 		if (onfocus != null)
-			basestr += " onfocus= \"" + onfocus + "\" ";
+			basestr += " onfocus=\"" + onfocus + "\"";
 		if (onhelp != null)
-			basestr += " onhelp= \"" + onhelp + "\" ";
+			basestr += " onhelp=\"" + onhelp + "\"";
 		if (onkeydown != null)
-			basestr += " onkeydown= \"" + onkeydown + "\" ";
+			basestr += " onkeydown=\"" + onkeydown + "\"";
 		if (onkeypress != null)
-			basestr += " onkeypress= \"" + onkeypress + "\" ";
+			basestr += " onkeypress=\"" + onkeypress + "\"";
 		if (onmousedown != null)
-			basestr += " onmousedown= \"" + onmousedown + "\" ";
+			basestr += " onmousedown=\"" + onmousedown + "\"";
 		if (onmousemove != null)
-			basestr += " onmousemove= \"" + onmousemove + "\" ";
+			basestr += " onmousemove=\"" + onmousemove + "\"";
 		if (onmouseout != null)
-			basestr += " onmouseout= \"" + onmouseout + "\" ";
+			basestr += " onmouseout=\"" + onmouseout + "\"";
 		if (onmouseup != null)
-			basestr += " onmouseup= \"" + onmouseup + "\" ";
+			basestr += " onmouseup=\"" + onmouseup + "\"";
 		if (onselect != null)
-			basestr += " onselect= \"" + onselect + "\" ";
+			basestr += " onselect=\"" + onselect + "\"";
 		// ---------------------------------------------------
 		if (readonly != null)
-			basestr += " readonly= \"" + readonly + "\" ";
+			basestr += " readonly=\"" + readonly + "\"";
 		if (size != null)
-			basestr += " size= \"" + size + "\" ";
+			basestr += " size=\"" + size + "\"";
 		if (width != null)
-			basestr += " width= \"" + width + "\" ";
+			basestr += " width=\"" + width + "\"";
 		if (value != null)
-			basestr += " value= \"" + value + "\" ";
+			basestr += " value=\"" + value + "\"";
 		if (title != null)
-			basestr += " title= \"" + title + "\" ";
+			basestr += " title=\"" + title + "\"";
 		if (tabindex != null)
-			basestr += " tabindex= \"" + tabindex + "\" ";
+			basestr += " tabindex=\"" + tabindex + "\"";
 		if (style != null)
-			basestr += " style= \"" + style + "\" ";
+			basestr += " style=\"" + style + "\"";
 		if (src != null)
-			basestr += " src= \"" + src + "\" ";
+			basestr += " src=\"" + src + "\"";
 		return basestr;
 	}
 
