@@ -14,7 +14,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="expires" content="0">    
   </head>
   <body>
-	<v:InputText name="hidden" id="hidden" type="hidden" fvformid="f1"></v:InputText>
+  <v:InputText name="hidden" id="hidden" type="hidden" fvformid="f1"></v:InputText>
   <form id="f1" action="">
   <table>
   	<tr>
@@ -24,8 +24,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	</tr>
   	<tr>
   		<td>输入限制控件：</td>
-  		<td><v:InputText name="dd" id="dd" type="text" fvtipid="dd_tip"></v:InputText></td>
-  		<td><div id="dd_tip"></div></td>
+  		<td><v:InputText name="dd" id="dd" type="text" fvtipid="ddTip" fvonshow="请输入大写字母" fvoncorrect="输入正确" fvonfocus="必须是大写字母" fvregexp="letter_u" fvonerror="大写字母格式不正确"></v:InputText></td>
+  		<td><div id="ddTip"></div></td>
   	</tr>
   </table>
   </form>
